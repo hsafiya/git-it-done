@@ -8,7 +8,17 @@ var getUserRepos = function(user) {
     response.json().then(function(data) {
       console.log(data);
     });
+
+    
+var userFormEl = document.querySelector("#user-form");
+var NameInputEl = document.querySelector("#username");
+var formSubmitHandler = function (event) {
+  event.preverntDefault();
+  console.log(event);
+};
+
   });
 };
 
-getUserRepos("lernantino");
+userFormEl.addEventListener("submit", formSubmitHandler);
+
