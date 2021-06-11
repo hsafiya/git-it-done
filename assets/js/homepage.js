@@ -5,15 +5,15 @@ var getUserRepos = function (user) {
   // make a get request to url
   fetch(apiUrl)
   .then(function (response) {
-    console.log(response);
-    response.json().then(function (data) {
-      console.log(data);
+    response.json().then(function(data){
+      displayRepos(data,user);
+    })
 
     });
 
-  });
+  };
 
-};
+
 
 var userFormEl = document.querySelector("#user-form");
 var NameInputEl = document.querySelector("#username");
