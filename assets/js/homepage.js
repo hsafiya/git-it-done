@@ -38,6 +38,9 @@ var formSubmitHandler = function(event) {
 userFormEl.addEventListener("submit", formSubmitHandler);
 
 var  displayRepos = function (repos, searchTerm) {
+  // clear old content
+repoContainerEl.textContent = "";
+repoSearchTerm.textContent = searchTerm;
   console.log (repos);
   console.log (searchTerm);
 };
